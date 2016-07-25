@@ -20,8 +20,7 @@ int main()
     {
         x=(double)(rand()%N+1)/(double)N;
         y=(double)(rand()%N+1)/(double)N;
-        //cout<<"(x,y)="<<'('<<x<<','<<y<<")\n";
-        
+
         S+=1;
         if(pow(x,2)+pow(y,2) < 1)
         {
