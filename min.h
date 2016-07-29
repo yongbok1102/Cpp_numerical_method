@@ -1,0 +1,1 @@
+double min(double X[], int N);

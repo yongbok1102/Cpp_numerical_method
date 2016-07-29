@@ -1,0 +1,1 @@
+double max(double X[], int N);
