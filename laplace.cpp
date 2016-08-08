@@ -7,7 +7,7 @@ using namespace std;
 /*This code is designed to solve     */
 /*Laplace equation using FDM         */
 /*Boundary conditions are given below*/
-/*u(0,y)=u(1,y)=u(x,1)=0, u(x,0)=1   */
+/*u(0,y)=1, u(1,y)=u(x,1)=u(x,0)=0   */
 
 int main()
 {
