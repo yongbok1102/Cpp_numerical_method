@@ -216,13 +216,11 @@ int main(){
     if(itr%10!=0)
     {
         cout<<"itr: "<<itr<<", resid: "<<res<<endl;
-        cout<<"x="<<endl;
-        for(int i=0; i<n; i++){
-            cout<<x[i]<<endl;
-        }
         out<<itr<<'\t'<<res<<endl;
     }
     out.close();
-    
+        for(int i=0; i<n; i++){
+		cout<<x[i]<<endl;
+	}
     return 0;
 }
