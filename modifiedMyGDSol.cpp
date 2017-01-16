@@ -95,13 +95,21 @@ int main(){
     double* grad; grad = new double[n];
     double* gradold; gradold = new double[n];
 
-    int itr = 0;   
+    int itr = 0;  int itrMax;
+    cout<<"Enter the maximum iteration number\n";
+    cin>>itrMax;
+     
     double stp;
     
     cout<<"Enter the initial step parameter\n";
     cin>>stp;
-
-    double tol = 1e-013;
+    double tol;
+    cout<<"Enter the tolerance error\n";
+    cin>>tol;
+    
+    int intv;
+    cout<<"Enter the interval\n";
+    cin>>intv;
 
     for(int i=0;i<n;i++)
     {
@@ -203,7 +211,7 @@ int main(){
                 
             res = calRes(sumAx,b,n);
                 
-            if(itr%10==0)
+            if(itr%intv==0)
             {
                 cout<<"itr: "<<itr<<", resid: "<<res<<endl;
                 out<<itr<<'\t'<<res<<endl;
@@ -212,9 +220,13 @@ int main(){
             if(stp<1e-008){
                 stp = 1;
             }
+            if(itr==itrMax){
+                cout<<"Failed to converge\n";
+                break;
+            }
         }
     }
-    if(itr%10!=0)
+    if(itr%intv!=0)
     {
         cout<<"itr: "<<itr<<", resid: "<<res<<endl;
         out<<itr<<'\t'<<res<<endl;
